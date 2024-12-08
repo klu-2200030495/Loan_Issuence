@@ -1,5 +1,6 @@
 package com.klef.sdp.springboot.controller;
 
+import com.klef.sdp.springboot.model.Borrower;
 import com.klef.sdp.springboot.model.LoanRequest;
 import com.klef.sdp.springboot.service.LoanRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,4 +51,5 @@ public class LoanRequestController {
             return "redirect:/loanrequest"; // Retry if request exists
         }
     }
+   
 }

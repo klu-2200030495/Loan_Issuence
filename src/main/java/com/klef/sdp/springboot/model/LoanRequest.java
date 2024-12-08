@@ -5,6 +5,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 
 @Entity
@@ -30,6 +33,9 @@ public class LoanRequest {
 
     @Column(name = "repayment_time", nullable = false) // Repayment time field
     private int repaymentTime; // Example: in months
+    @Column(nullable = false)
+    private LocalDateTime requestDate = LocalDateTime.now();
+
 
     // Getters and Setters
     public Long getId() {

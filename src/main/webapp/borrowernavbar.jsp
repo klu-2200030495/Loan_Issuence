@@ -1,3 +1,10 @@
+<%@page import="com.klef.sdp.springboot.model.Borrower" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	<% 
+	    Borrower bd = (Borrower) session.getAttribute("borrower");
+	%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,11 +66,13 @@
                 <!-- Links -->
                 <div class="hidden md:flex space-x-8">
                     <a href="lenderdashboard" class="text-gray-600 hover:text-primary transition">Lending Dashboard</a>
-                    <a href="borrowerdashboard" class="text-gray-600 hover:text-primary transition">Application Dashboard</a>
+					<a href="borrowerdashboard" class="text-gray-600 hover:text-primary transition">Application Dashboard</a>
+
+
                     <a href="calculator" class="text-gray-600 hover:text-primary transition">Loan Calculator</a>
 					<a href="loanrequest" class="text-gray-600 hover:text-primary transition">Request Loan</a>
 
-					<a href="/applied-loans" class="text-gray-700 hover:text-gray-900">Applied Loans</a>
+					
                 </div>
 
                 <!-- Buttons -->

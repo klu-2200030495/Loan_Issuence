@@ -1,7 +1,11 @@
 package com.klef.sdp.springboot.service;
 
+import com.klef.sdp.springboot.model.Borrower;
 import com.klef.sdp.springboot.model.LoanRequest;
 import com.klef.sdp.springboot.repository.LoanRequestRepository;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,4 +31,8 @@ public class LoanRequestServiceImpl implements LoanRequestService {
 
         return "Loan request submitted successfully";
     }
+    public List<LoanRequest> getLoanRequestsByUserId(int userId) {
+        return loanRequestRepository.findById(userId);
+    }
+
 }
